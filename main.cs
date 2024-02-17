@@ -1,18 +1,21 @@
 using System;
 
-using System;
-
-class Program {
-  public static void Main (string[] args) {
-    Console.WriteLine ("Enter something:");
-
-    string input;
-    do
+class Program
+{
+    static void Main()
     {
-      input = Console.ReadLine();
-      Console.WriteLine($"You entered: {input}");
-    } while (input != "exit");
+        string userInput = "";
+        string output = "";
 
-    Console.WriteLine("Closing program...");
-  }
+        Console.WriteLine("Enter something:");
+
+        while ((userInput = Console.ReadLine()) != "exit")
+        {
+            output += userInput + " ";
+            Console.WriteLine(output.Trim());
+            Console.WriteLine("Enter something:");
+        }
+
+        Console.WriteLine("\nClosing program...");
+    }
 }
